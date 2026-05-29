@@ -1,0 +1,33 @@
+spec_version: "0.1.0"
+name: claude-agents
+version: 1.0.0
+description: >
+  A curated collection of seven custom Claude Code subagents — each a focused
+  specialist that Claude Code automatically invokes when the task matches its
+  domain. Covers code refactoring, content writing, frontend design, PRD
+  authoring, project task planning, security auditing, and vibe coding coaching.
+  Install once, works project-wide or globally across all your Claude Code sessions.
+license: MIT
+model:
+  preferred: anthropic:claude-sonnet-4-6
+skills:
+  - name: code-refactorer
+    description: Improve code structure, readability, and maintainability without changing functionality
+  - name: content-writer
+    description: Produce clear, well-structured written content for any audience
+  - name: frontend-designer
+    description: Design and implement responsive, accessible frontend components
+  - name: prd-writer
+    description: Author detailed Product Requirement Documents from feature briefs
+  - name: project-task-planner
+    description: Break down projects into structured, prioritised task lists
+  - name: security-auditor
+    description: Perform comprehensive security audits and produce actionable remediation reports
+  - name: vibe-coding-coach
+    description: Guide developers with coding best-practices, mentorship, and motivation
+runtime:
+  max_turns: 50
+compliance:
+  risk_tier: standard
+  supervision:
+    human_in_the_loop: none
