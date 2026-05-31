@@ -2,11 +2,10 @@ spec_version: "0.1.0"
 name: claude-agents
 version: 1.0.0
 description: >
-  A curated collection of seven specialised Claude Code sub-agents — covering
-  code refactoring, content writing, frontend design, PRD authoring, project
-  planning, security auditing, and vibe-coding coaching. Drop any agent into
-  your project's .claude/agents/ directory (or globally into ~/.claude/agents/)
-  and Claude Code will automatically invoke the right specialist for each task.
+  A curated collection of seven specialised Claude Code sub-agents that drop
+  into any project via `.claude/agents/`. Covers the full dev lifecycle: code
+  refactoring, security auditing, frontend design, content writing, PRD
+  authoring, project task planning, and vibe-led application coaching.
 author: iannuttall
 license: MIT
 
@@ -15,11 +14,11 @@ model:
 
 skills:
   - code-refactorer
-  - content-writer
+  - security-auditor
   - frontend-designer
+  - content-writer
   - prd-writer
   - project-task-planner
-  - security-auditor
   - vibe-coding-coach
 
 runtime:
@@ -28,7 +27,9 @@ runtime:
 compliance:
   risk_tier: standard
   supervision:
-    human_in_the_loop: none
+    human_in_the_loop: destructive
     kill_switch: true
   recordkeeping:
     audit_logging: false
+  data_governance:
+    pii_handling: none
